@@ -14,6 +14,7 @@ class CreateProjectsTable extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
+            $table->softDeletes();
             $table->id();
             $table->string('name');
             $table->timestamps();
